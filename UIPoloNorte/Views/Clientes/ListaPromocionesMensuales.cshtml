@@ -1,0 +1,62 @@
+﻿@model IEnumerable<UIPoloNorte.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Promociones mensuales";
+}
+
+<h1>Lista de promociones mensuales</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cedula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreCompleto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdRefDescuento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompraReciente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComprasUltimoAno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompraAc)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cedula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreCompleto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdRefDescuento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompraReciente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComprasUltimoAno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompraAc)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
